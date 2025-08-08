@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "vn.com.unit.digisign",
+      "sha256_cert_fingerprints": [
+        "D7:60:A9:54:EA:A0:B6:30:3C:D5:86:76:13:93:07:55:5E:54:C2:88:89:37:02:BE:7F:60:65:EB:4E:6B:82:CA"
+      ]
+    }
+  }
+]
