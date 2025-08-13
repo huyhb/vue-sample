@@ -1,13 +1,11 @@
 <script setup>
 import { RouterLink } from 'vue-router';
 import Footer from './components/Footer.vue'
+import HomeView from './views/HomeView.vue';
 </script>
 
 <template>
-  <header>
-    <img class="logo" width="60" height="60" src="@/assets/logo.svg" alt="logo">
-    
-  </header>
+  <HomeView />
 </template>
 
 <style scoped>

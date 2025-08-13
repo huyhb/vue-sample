@@ -1,13 +1,50 @@
 <template>
   <footer class="app-footer">
-    <div class="footer-content">
-      <p>© 2025 YourCompany. All rights reserved.</p>
-      <nav>
-        <a href="#">Privacy</a>
-        <a href="#">Terms</a>
-        <a href="#">Contact</a>
-      </nav>
+    <!-- Phần layout bên trái -->
+    <div class="left-footer">
+      <div class="left-app-logo">
+        <!-- logo và tên-->
+        <div class="app-logo-footer">
+
+        </div>
+        <p class="app-name-footer">LaslesVPN</p>
+      </div>
+      <div class="des-app-footer-info">
+        <p style="color: #4F5665;">LaslesVPN is a private virtual network that has unique features and has high
+          security.</p>
+      </div>
+
+      <p class="coppy-right-footer">©2025LaslesVPN</p>
     </div>
+
+    <!-- Phần layout bên phải -->
+    <div class="right-footer">
+      <div class="header-right-footer">
+        <a class="link-privacy" href="#">Chính sách Riêng tư và Bảo mật</a>
+        <a class="link-policy" href="#">Điều khoản sử dụng ứng dụng</a>
+      </div>
+      <div class="info-right-link">
+        <div class="container-link">
+          <p class="title-link">Thông tin</p>
+          <a class="link-item" href="#">About</a>
+          <a class="link-item" href="#">Info</a>
+          <a class="link-item" href="#">Download</a>
+          <a class="link-item" href="#">Contact</a>
+        </div>
+        <div class="container-link">
+          <p class="title-link">Liên kết</p>
+          <a class="link-item" href="#">Google Play</a>
+          <a class="link-item" href="#">Apple Store</a>
+        </div>
+        <div class="container-link">
+          <p class="title-link">Khác</p>
+          <a class="link-item" href="#">Trang chủ</a>
+          <a class="link-item" href="#">Dịch vụ</a>
+          <a class="link-item" href="#">Địa chỉ</a>
+        </div>
+      </div>
+    </div>
+
   </footer>
 </template>
 
@@ -16,43 +53,142 @@
 </script>
 
 <style scoped>
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
-  }
-}
-
-
 .app-footer {
-  padding: 1.5rem;
-  background-color: var(--color-background-soft);
-  color: var(--color-text);
-  border-top: 1px solid var(--color-border);
-  text-align: center;
-  font-size: 0.9rem;
+  display: flex;
+  flex-direction: row;
+  padding: 20px 20px;
+  background-color: #F8F8F8;
 }
 
-.footer-content {
+.left-footer {
+  width: 40%;
+  display: block;
+  padding-right: 80px;
+}
+
+.right-footer {
+  width: 60%;
+}
+
+.right-footer {
+  display: block;
+  justify-content: flex-end;
+}
+
+.left-app-logo {
   display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
   align-items: center;
 }
 
-.footer-content nav {
+.app-logo-footer {
+  width: 50px;
+  height: 50px;
+  background-color: red;
+}
+
+.app-name-footer {
+  margin-left: 10px;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.des-app-footer-info {
+  margin-top: 15px;
+}
+
+.coppy-right-footer {
+  margin-top: 40px;
+  color: #AFB5C0;
+}
+
+/* right */
+.header-right-footer {
+  width: 100%;
   display: flex;
-  gap: 1.5rem;
+  align-items: end;
+  justify-content: flex-end;
+  padding: 10px;
 }
 
-.footer-content a {
-  color: var(--color-text);
+a {
   text-decoration: none;
-  font-weight: 500;
 }
 
-.footer-content a:hover {
-  color: var(--color-heading);
-  text-decoration: underline;
+.link-privacy {
+  font-size: 15px;
+  font-weight: 500;
+  color: #fc7373;
+  margin-right: 30px;
+}
+
+.link-policy {
+  font-size: 15px;
+  font-weight: 500;
+  color: #fc7373;
+}
+
+.container-link {
+  display: block;
+}
+
+.info-right-link {
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 150px;
+  align-items: start;
+}
+
+.title-link {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.link-item {
+  display: block;
+  font-size: 15;
+  color: #4F5665;
+  margin-top: 5px;
+}
+
+@media (max-width: 768px) {
+  .app-footer {
+    flex-direction: column-reverse;
+  }
+
+  .right-footer,
+  .left-footer {
+    width: 100%;
+  }
+
+  .header-right-footer {
+    padding: 0;
+    margin: 0;
+    justify-content: space-between;
+  }
+
+  .link-privacy {
+    margin-right: 10px;
+  }
+
+  .info-right-link {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 0px;
+    margin-top: 30px;
+  }
+
+  .left-footer {
+    margin-top: 40px;
+    padding: 0;
+  }
+
+  .coppy-right-footer {
+    width: 100%;
+    display: flex;
+    margin-top: 40px;
+    justify-content: center;
+    align-items: center;
+  }
 }
 </style>
